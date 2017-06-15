@@ -10,6 +10,10 @@ try:
     print("Program starting")
     while True:
         newState = GPIO.input(11)
+        if newState:
+            print("1")
+        else:
+            print("0")
         # When the current state of GPIO input is not the same as the previous
         # recorded state
         if prevState != newState:
